@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad Web - Interfaz de Usuario</title>
+</head>
+
+<body>
+    <header style="background-color: lightblue; padding: 20px;">
+        <!-- Documentar: Se usa <header> en lugar de <div> para marcar encabezado. -->
+        <h1 style="font-size: 30px;">Guia de Accesibilidad Web</h1>
+        <!-- Documentar: Se cambio a <h1> para jerarquia semantica adecuada. -->
+    </header>
+
+    <section aria-labelledby="accesibilidad-visual">
+        <!-- Documentar: Se usa <section> y aria-labelledby para mejorar la navegacion con lector de pantalla. -->
+        <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" width="150" height="150"
+            alt="Representacion visual de accesibilidad">
+        <!-- Documentar: Se agrego atributo alt para describir la imagen. -->
+        <p id="accesibilidad-visual">Accesibilidad visual en sitios web.</p>
+        <!-- Documentar: Se usa <p> para texto descriptivo y se le da un id. -->
+    </section>
+
+    <section>
+        <h2>Introduccion a la Accesibilidad Web</h2>
+        <!-- Documentar: Se usa <h2> en lugar de <span> para jerarquia y estructura semantica. -->
+        <p>En esta pagina se aprendera conceptos basicos sobre como mejorar la accesibilidad de un sitio web.</p>
+        <!-- Documentar: Se usa <p> en lugar de <div> para contenido textual. -->
+    </section>
+
+    <section style="padding: 10px; background-color: lightgray;">
+        <h2>Recursos</h2> <!-- Documentar: Se agrego encabezado para esta seccion. -->
+        <p>
+            <strong>Guia completa: </strong>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+                style="text-decoration: none; color: red;">
+                Clic aqui para leer mas
+            </a>
+        </p>
+        <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+                style="text-decoration: none; color: blue;">
+                Más recursos sobre accesibilidad
+            </a>
+        </p>
+    </section>
+
+    <section>
+        <h2>Formulario de Contacto sobre Accesibilidad Web</h2>
+        <form aria-label="Formulario de contacto"> <!-- Documentar: Uso de <form> con aria-label para accesibilidad. -->
+            <label for="nombre">Nombre:</label>
+            <!-- Documentar: Se agrego etiqueta <label> para accesibilidad del input. -->
+            <input id="nombre" type="text" placeholder="Nombre" name="nombre"><br><br>
+
+            <label for="correo">Correo Electronico:</label>
+            <input id="correo" type="email" placeholder="Correo Electronico" name="correo"><br><br>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" placeholder="Escribe tus preguntas sobre accesibilidad"
+                name="mensaje"></textarea><br><br>
+
+            <button type="submit" style="background-color: blue; color: white; padding: 10px;">Enviar</button>
+            <!-- Documentar: Se cambio <div> por <button> para accesibilidad con teclado y semantica. -->
+        </form>
+    </section>
+
+    <section style="margin-top: 20px;">
+        <h2>Herramientas de Accesibilidad</h2>
+        <div style="background-color: pink; padding: 10px;">
+            <article>
+                <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" width="100"
+                    height="100" alt="Icono de Lector de Pantalla">
+                <!-- Documentar: Se agrego alt para describir la imagen. -->
+                <h3>Lector de Pantalla</h3>
+                <a href="#" style="display: inline-block; background-color: orange; padding: 5px;">Descargar</a>
+                <!-- Documentar: Se usa <a> en lugar de <div> para accesibilidad como boton de enlace. -->
+            </article>
+            <article>
+                <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" width="100"
+                    height="100" alt="Icono de verificador de contraste">
+                <h3>Contrast Checker</h3>
+                <a href="#" style="display: inline-block; background-color: orange; padding: 5px;">Descargar</a>
+            </article>
+            <article>
+                <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" width="100"
+                    height="100" alt="Icono del validador WCAG">
+                <h3>Validador WCAG</h3>
+                <a href="#" style="display: inline-block; background-color: orange; padding: 5px;">Descargar</a>
+            </article>
+        </div>
+    </section>
+
+    <footer style="background-color: #333; color: white; padding: 20px; margin-top: 40px;">
+        <p>© 2024 Accesibilidad Web - Interfaz del Usuario</p>
+        <p>Promoviendo la inclusion digital</p>
+        <nav aria-label="Enlaces de pie de página">
+            <!-- Documentar: Se agrego <nav> con aria-label para agrupar enlaces relacionados. -->
+            <a href="https://accesibilidad.com/privacidad" style="color: white;">Politica de Privacidad</a> |
+            <a href="https://accesibilidad.com/terminos" style="color: white;">Terminos y Condiciones</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos de Roles ARIA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        [role="radio"] {
+            border: 1px solid #ccc;
+            padding: 8px;
+            margin: 4px 0;
+            cursor: pointer;
+        }
+
+        [role="radio"][aria-checked="true"] {
+            background-color: #d0eaff;
+            border-color: #007bff;
+        }
+
+        [role="table"] {
+            display: table;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        [role="rowgroup"] {
+            display: table-row-group;
+        }
+
+        [role="row"] {
+            display: table-row;
+        }
+
+        [role="columnheader"],
+        [role="cell"] {
+            display: table-cell;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+        }
+
+        [role="columnheader"] {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+
+        [role="img"] {
+            margin-top: 20px;
+        }
+
+        [role="img"] img {
+            max-width: 300px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejemplos de Roles ARIA</h1>
+
+    <!-- role="radio" -->
+    <section>
+        <h2>Seleccion con Radio Buttons (ARIA)</h2>
+        <div role="radiogroup" aria-labelledby="radioLabel">
+            <p id="radioLabel">Seleccione su genero:</p>
+
+            <div role="radio" tabindex="0" aria-checked="true">Masculino</div>
+            <div role="radio" tabindex="-1" aria-checked="false">Femenino</div>
+            <div role="radio" tabindex="-1" aria-checked="false">Otro</div>
+        </div>
+    </section>
+
+    <!-- role="table" -->
+    <section>
+        <h2>Tabla ARIA</h2>
+        <div role="table" aria-label="Tabla de empleados">
+            <div role="rowgroup">
+                <div role="row">
+                    <div role="columnheader">Nombre</div>
+                    <div role="columnheader">Departamento</div>
+                </div>
+            </div>
+            <div role="rowgroup">
+                <div role="row">
+                    <div role="cell">Jorge Arteaga</div>
+                    <div role="cell">Ventas</div>
+                </div>
+                <div role="row">
+                    <div role="cell">Fernando Martinez</div>
+                    <div role="cell">Marketing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- role="img" -->
+    <section>
+        <h2>Imagen ARIA</h2>
+        <div role="img" aria-label="Una familia feliz en un parque soleado">
+            <img src="https://via.placeholder.com/300x200?text=Familia+en+el+parque" alt="">
+        </div>
+    </section>
+
+    <!-- JavaScript para funcionalidad de role="radio" -->
+    <script>
+        const radios = document.querySelectorAll('[role="radio"]');
+
+        radios.forEach(radio => {
+            radio.addEventListener('click', () => {
+                radios.forEach(r => {
+                    r.setAttribute('aria-checked', 'false');
+                    r.setAttribute('tabindex', '-1');
+                });
+                radio.setAttribute('aria-checked', 'true');
+                radio.setAttribute('tabindex', '0');
+                radio.focus();
+            });
+
+            radio.addEventListener('keydown', (e) => {
+                const currentIndex = Array.from(radios).indexOf(document.activeElement);
+                let newIndex = currentIndex;
+
+                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                    newIndex = (currentIndex + 1) % radios.length;
+                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                    newIndex = (currentIndex - 1 + radios.length) % radios.length;
+                }
+
+                if (newIndex !== currentIndex) {
+                    radios[newIndex].click();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
