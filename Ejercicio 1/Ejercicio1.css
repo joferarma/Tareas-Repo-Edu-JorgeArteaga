@@ -1,0 +1,18 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.layout__row {
+    display: flex;
+    gap: 30px;
+}
+
+.layout__item {
+    background-color: #eee;
+    padding: 40px;
+    text-align: center;
+    font-size: 24px;
+}

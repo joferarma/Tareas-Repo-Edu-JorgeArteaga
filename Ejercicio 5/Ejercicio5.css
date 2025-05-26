@@ -1,0 +1,21 @@
+.screen {
+    background-color: #add8e6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.list__item {
+    background-color: #fce5a8;
+    border: 3px solid #fcb653;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+}

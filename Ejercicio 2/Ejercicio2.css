@@ -1,0 +1,19 @@
+.grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.grid__column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid__item {
+    background-color: #eee;
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+}

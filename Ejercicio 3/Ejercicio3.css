@@ -1,0 +1,42 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.layout__row {
+    display: flex;
+    justify-content: center;
+}
+
+.layout__box {
+    width: 150px;
+    height: 150px;
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout__box--1 {
+    background-color: #f8d28a;
+}
+
+.layout__box--2 {
+    background-color: #f2989b;
+}
+
+.layout__box--3 {
+    background-color: #aad4f8;
+}
+
+.layout__box--4 {
+    background-color: #c3f0fb;
+}
+
+.layout__box--5 {
+    background-color: #c7c6f7;
+}
