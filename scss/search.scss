@@ -1,0 +1,47 @@
+.search {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: $spacing-lg;
+
+    &__logo {
+        width: 272px;
+        height: 92px;
+        margin-bottom: $spacing-md;
+    }
+
+    &__bar {
+        @include flex-center;
+        border: 1px solid #dfe1e5;
+        border-radius: 24px;
+        padding: $spacing-sm $spacing-md;
+        width: 100%;
+        max-width: 584px;
+
+        input {
+            flex: 1;
+            border: none;
+            font-size: 16px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__buttons {
+        margin-top: $spacing-md;
+
+        button {
+            margin: 4px;
+            padding: 10px 20px;
+            background-color: $color-bg;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                border-color: #c6c6c6;
+            }
+        }
+    }
+}

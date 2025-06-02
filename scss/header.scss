@@ -1,0 +1,21 @@
+.header {
+    @include flex-center;
+    justify-content: flex-end;
+    padding: $spacing-md;
+
+    &__link {
+        margin-left: $spacing-md;
+        color: $color-text;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'search';
+@import 'footer';
+
+body {
+    font-family: $font-base;
+    margin: 0;
+    background-color: white;
+}

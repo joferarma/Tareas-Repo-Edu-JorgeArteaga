@@ -1,0 +1,26 @@
+.footer {
+    background-color: $color-bg;
+    font-size: 14px;
+    color: $color-text;
+    padding: $spacing-sm $spacing-md;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    &__row {
+        @include flex-center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: $spacing-sm;
+    }
+
+    &__link {
+        margin: 4px $spacing-sm;
+        text-decoration: none;
+        color: $color-text;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
