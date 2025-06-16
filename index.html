@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios con Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+</head>
+
+<body class="bg-gray-100 p-5">
+
+    <!-- Boton con color personalizado "brand" -->
+    <button class="bg-brand text-black-50 px-4 py-2 rounded-md">
+        Boton Brand
+    </button>
+
+    <!-- Encabezado con fuente Poppins -->
+    <h1 class="font-poppins text-4xl mt-5">
+        Encabezado Poppins
+    </h1>
+
+    <!-- Div con nuevo espaciado "2025" -->
+    <div class="bg-gray-300 p-2025 mt-5">
+        Div con padding personalizado 2025
+    </div>
+
+    <!-- Breakpoint xs -->
+    <div class="bg-blue-500 xs:bg-green-500 sm:bg-yellow-500 md:bg-red-500 p-4 mt-5">
+        Cambia de color segun el tamaño de pantalla
+    </div>
+
+    <!-- Width custom-w -->
+    <div class="bg-gray-400 custom-w p-4 mt-5">
+        Ancho custom-w
+    </div>
+
+    <!-- Min-width custom-min-w -->
+    <button class="bg-blue-700 text-gray-50 px-4 py-2 rounded-md custom-min-w mt-5">
+        Boton con min-width custom
+    </button>
+
+    <!-- Min-height custom-min-h -->
+    <div class="bg-gray-500 custom-min-h p-4 mt-5">
+        Contenedor con altura minima custom
+    </div>
+
+</body>
+
+</html>
